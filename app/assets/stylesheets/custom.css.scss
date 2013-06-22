@@ -2,12 +2,17 @@
 @import "bootstrap-responsive";
 
 @font-face {
+  font-family: "Avenir";
+  src: url('../Avenir.ttc');
+}
+
+@font-face {
   font-family: "Myriad Pro";
   src: url('../MyriadPro_Regular.otf');
 }
 
-$deepPurple = #18172b;
-$mediumGray = #b5b5b5;
+$deepPurple: #18172b;
+$lightGray: #b5b5b5;
 
 body {
   padding-top: 60px;
@@ -52,7 +57,7 @@ footer {
     }
 
     div#copyright-text {
-      color: $mediumGray;
+      color: $lightGray;
       text-align: center;
       font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
       font-size: 1.313em;
