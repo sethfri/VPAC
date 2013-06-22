@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div id="news-carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#news-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#news-carousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <%= image_tag('vutgroup.jpg', alt: 'VUT Banquet 2013') %>
+            <div class="carousel-caption">
+              <h4>VUT Banquet 2013</h4>
+              <p>Vanderbilt University Theatre gathered for its annual banquet last Monday to celebrate a year of
+              wonderful shows and bid adieu to its senior members.</p>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag('24hour.jpg', alt: '24 Hour Production 2013') %>
+            <div class="carousel-caption">
+              <h4>24-Hour Production 2013</h4>
+              <p>Here's the 24-Hour Production just doing their thing.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#news-carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#news-carousel" data-slide="next">&rsaquo;</a>
+      </div>
+    </div>
+  </div>
+</div>
