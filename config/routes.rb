@@ -1,15 +1,11 @@
 Vpac::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
 
-  get "static_pages/about"
-
-  get "static_pages/resources"
-
-  get "static_pages/events"
-
-  get "static_pages/media"
-
-  get "static_pages/contact"
+  match '/about', to: 'static_pages#about'
+  match '/resources', to: 'static_pages#resources'
+  match '/events', to: 'static_pages#events'
+  match '/media', to: 'static_pages#media'
+  match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
