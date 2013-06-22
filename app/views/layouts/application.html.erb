@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vpac</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to image_tag("logo.png", alt: "VPAC logo"), '#', class: "brand"%>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", '#' %></li>
+          <li><%= link_to "About", '#' %></li>
+          <li><%= link_to "Resources", '#' %></li>
+          <li><%= link_to "Events", '#' %></li>
+          <li><%= link_to "Media", '#' %></li>
+          <li><%= link_to "Contact", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>
