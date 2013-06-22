@@ -1,2 +1,59 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url('../MyriadPro_Regular.otf');
+}
+
+body {
+  padding-top: 60px;
+}
+
+header {
+  font-size: 13px;
+  line-height: 47px;
+
+  * {
+    line-height: inherit;
+  }
+}
+
+footer {
+  div.navbar {
+    background-color: #18172b;
+
+    div#icons {
+      text-align: center;
+      line-height: 29px;
+      margin-top: 22px;
+      margin-bottom: 13px;
+
+      * {
+        line-height: inherit;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          display: inline-block;
+        }
+
+        li.divider {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+      }
+    }
+
+    div#copyright-text {
+      color: #b5b5b5;
+      clear: both;
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 1.313em;
+      margin-bottom: 9px;
+    }
+  }
+}
