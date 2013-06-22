@@ -5,6 +5,15 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def help
+  def resources
+  end
+
+  def events
+  end
+
+  def media
+  end
+
+  def contact
   end
 end
