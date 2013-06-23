@@ -5,9 +5,34 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to 'Home', root_path %></li>
-          <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Resources', resources_path %></li>
-          <li><%= link_to 'Events', events_path %></li>
+          <li class="dropdown">
+            <%= link_to 'About', '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Mission</a></li>
+              <li><a tabindex="-1" href="#">History</a></li>
+              <li><a tabindex="-1" href="#">Member Groups</a></li>
+              <li><a tabindex="-1" href="#">Current Board</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <%= link_to 'Resources', '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Reserve Space</a></li>
+              <li><a tabindex="-1" href="#">Publicity</a></li>
+              <li><a tabindex="-1" href="#">AcFee Help</a></li>
+              <li><a tabindex="-1" href="#">Anchor Link Help</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <%= link_to 'Events', '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">Calendar</a></li>
+              <li><a tabindex="-1" href="#">Auditions</a></li>
+              <li><a tabindex="-1" href="#">Spotlight</a></li>
+              <li><a tabindex="-1" href="#">Main Attraction</a></li>
+              <li><a tabindex="-1" href="#">Encore</a></li>
+            </ul>
+          </li>
           <li><%= link_to 'Media', media_path %></li>
           <li><%= link_to 'Contact', contact_path %></li>
         </ul>
