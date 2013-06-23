@@ -2,7 +2,6 @@ $deepPurple: #18172b;
 $lightGray: #b5b5b5;
 
 $navbarBackground: $deepPurple;
-$dropdownLinkBackgroundHover: $lightGray;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -28,10 +27,6 @@ header {
   line-height: 47px;
 
   * {
-    line-height: inherit;
-  }
-
-  div.dropdown {
     line-height: inherit;
   }
 }
