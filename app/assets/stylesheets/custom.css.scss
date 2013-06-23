@@ -4,6 +4,12 @@ $lightGray: #b5b5b5;
 $navbarBackground: $deepPurple;
 
 @import "bootstrap";
+
+// We add this in between the responsive CSS as requested in the navbar docs.
+body {
+  padding-top: 70px;
+}
+
 @import "bootstrap-responsive";
 
 @font-face {
@@ -14,10 +20,6 @@ $navbarBackground: $deepPurple;
 @font-face {
   font-family: "Myriad Pro";
   src: url('../MyriadPro_Regular.otf');
-}
-
-body {
-  padding-top: 70px;
 }
 
 header {
