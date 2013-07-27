@@ -37,6 +37,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+# Twitter Bootstrap
+gem 'bootstrap-sass'
+
 # Thin server
 gem 'thin'
 
