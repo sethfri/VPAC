@@ -1,5 +1,6 @@
 $deepPurple: #18172b;
 $lightGray: #b5b5b5;
+$redGradient: linear-gradient(to top, rgba(160,48,37,1), rgba(160,48,37,0.95) 82%, rgba(160,48,37,0.9));
 
 $navbarBackground: $deepPurple;
 
@@ -13,8 +14,8 @@ body {
 @import "bootstrap-responsive";
 
 @font-face {
-  font-family: "Avenir";
-  src: url('../Avenir.ttc');
+  font-family: "Avenir Light";
+  src: url('../Avenir_Light.ttf');
 }
 
 @font-face {
@@ -30,6 +31,37 @@ header {
 
   * {
     line-height: inherit;
+  }
+}
+
+.hero-unit {
+  background: $redGradient;
+}
+
+form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "Avenir Light";
+  font-size: 1.725em;
+
+  input.input-block-level {
+    margin-bottom: 32px;
+  }
+
+  textarea.input-block-level {
+    margin-bottom: 26px;
+  }
+
+  .btn {
+    color: white;
+    width: 138px;
+    height: 40px;
+  }
+
+  .about-btn {
+    background: $redGradient;
   }
 }
 
