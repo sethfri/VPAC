@@ -1,5 +1,7 @@
 $deepPurple: #18172b;
 $lightGray: #b5b5b5;
+$brightRed: rgba(160,48,37,1);
+$mutedRed: rgba(160,48,37,0.9);
 $redGradient: linear-gradient(to top, rgba(160,48,37,1), rgba(160,48,37,0.95) 82%, rgba(160,48,37,0.9));
 
 $navbarBackground: $deepPurple;
@@ -60,8 +62,14 @@ form {
     height: 40px;
   }
 
-  .about-btn {
-    background: $redGradient;
+  .btn-about {
+    //background-color: $brightRed;
+    //*background-color: $mutedRed;
+    background-image: $redGradient;
+
+    &:active, &:hover {
+      background-color: $brightRed;
+    }
   }
 }
 
