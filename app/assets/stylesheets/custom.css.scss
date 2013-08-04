@@ -15,7 +15,6 @@ $navbarBackground: $deepPurple;
 // We add this in between the responsive CSS as requested in the navbar docs.
 body {
   padding-top: 70px;
-  padding-bottom: 100px;
 }
 
 @import "bootstrap-responsive";
@@ -61,6 +60,7 @@ header {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
   }
 }
 
@@ -106,8 +106,10 @@ form {
 }
 
 footer {
-  div.navbar {
+  .navbar {
     background-color: $deepPurple;
+    margin-bottom: 0;
+    overflow: auto;
 
     div#icons {
       text-align: center;
