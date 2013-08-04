@@ -2,7 +2,10 @@ $deepPurple: #18172b;
 $lightGray: #b5b5b5;
 $brightRed: rgba(160,48,37,1);
 $mutedRed: rgba(160,48,37,0.9);
+
 $redGradient: linear-gradient(to top, rgba(160,48,37,1), rgba(160,48,37,0.95) 82%, rgba(160,48,37,0.9));
+$yellowGradient: linear-gradient(to top, rgba(228,163,39,1), rgba(228, 163,39,0.95) 82%, rgba(228,163,39,0.9));
+
 $whiteTextGradient: linear-gradient(to top, rgba(255,255,255,1), rgba(207,208,210,1));
 
 $navbarBackground: $deepPurple;
@@ -12,6 +15,7 @@ $navbarBackground: $deepPurple;
 // We add this in between the responsive CSS as requested in the navbar docs.
 body {
   padding-top: 70px;
+  padding-bottom: 100px;
 }
 
 @import "bootstrap-responsive";
@@ -38,11 +42,26 @@ header {
 }
 
 .hero-unit {
-  background: $redGradient;
   color: white;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+
+  &.hero-unit-about {
+    background: $redGradient;
+  }
+
+  &.hero-unit-events {
+    background: $yellowGradient;
+  }
+}
+
+.container {
+  &.container-content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 form {
@@ -61,13 +80,11 @@ form {
     margin-bottom: 26px;
   }
 
-  .btn {
+  .btn-about {
     color: white;
     width: 138px;
     height: 40px;
-  }
 
-  .btn-about {
     //background-color: $brightRed;
     //*background-color: $mutedRed;
     background-image: $redGradient;
@@ -76,6 +93,16 @@ form {
       background-color: $brightRed;
     }
   }
+}
+
+.poster {
+  width: 400px;
+  height: 800px;
+  margin-right:30px;
+}
+
+.poster-text {
+  margin-left: 30px;
 }
 
 footer {

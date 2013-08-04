@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def mission
   end
 
+  def spotlight
+  end
+
   def media
   end
 
