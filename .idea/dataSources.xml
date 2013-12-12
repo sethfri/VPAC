@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="1283567609">
-    <data-source source="LOCAL" name="Rails vpac: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="503c4b2b-f7a2-4346-b85e-cc2824b38bb1">
+    <data-source source="LOCAL" name="Rails vpac: test" uuid="503c4b2b-f7a2-4346-b85e-cc2824b38bb1">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:vpac_test</jdbc-url>
       <user-name>vpac</user-name>
@@ -14,7 +15,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails vpac: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="71578dc5-4a80-4d6d-8b67-9eac3b341d89">
+    <data-source source="LOCAL" name="Rails vpac: production" uuid="71578dc5-4a80-4d6d-8b67-9eac3b341d89">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:vpac_production</jdbc-url>
       <user-name>vpac</user-name>
@@ -27,7 +29,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails vpac: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="539c8554-2562-4466-85d7-e85a1769a4d5">
+    <data-source source="LOCAL" name="Rails vpac: development" uuid="539c8554-2562-4466-85d7-e85a1769a4d5">
+      <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries>
@@ -39,7 +42,8 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Rails vpac: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="a83d60e3-ad90-4849-879a-ada9c928a3a7">
+    <data-source source="LOCAL" name="Rails vpac: development" uuid="a83d60e3-ad90-4849-879a-ada9c928a3a7">
+      <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:vpac_development</jdbc-url>
       <user-name>vpac</user-name>
