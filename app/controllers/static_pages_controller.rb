@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def mission
   end
 
+  def calendar
+  end
+
   def spotlight
   end
 
