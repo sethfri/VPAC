@@ -14,7 +14,6 @@ $navbarBackground: $deepPurple;
 
 body {
   padding-top: 70px;
-  background-color: $deepPurple;
 }
 
 @font-face {
@@ -48,32 +47,30 @@ body {
 }
 
 .carousel {
-  height: 650px;
+  height: 675px;
 
   .item {
-    height: 650px;
+    height: 675px;
 
     img {
       position: absolute;
       top: 0;
       left: 0;
       min-width: 100%;
-      height: 650px;
+      height: 675px;
     }
   }
 }
 
-.hero-unit {
+.jumbotron {
   color: white;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
 
-  &.hero-unit-about {
+
+  &.jumbotron-about {
     background: $redGradient;
   }
 
-  &.hero-unit-events {
+  &.jumbotron-events {
     background: $yellowGradient;
   }
 }
@@ -85,6 +82,10 @@ body {
     margin-right: auto;
     margin-bottom: 30px;
   }
+}
+
+#mission-image {
+  padding-bottom: 10px;
 }
 
 form {
@@ -129,6 +130,8 @@ form {
 }
 
 footer {
+  background-color: $deepPurple;
+
   div#icons {
     text-align: center;
     line-height: 29px;
