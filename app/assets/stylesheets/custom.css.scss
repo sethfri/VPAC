@@ -8,8 +8,6 @@ $yellowGradient: linear-gradient(to top, rgba(228,163,39,1), rgba(228, 163,39,0.
 
 $whiteTextGradient: linear-gradient(to top, rgba(255,255,255,1), rgba(207,208,210,1));
 
-$navbarBackground: $deepPurple;
-
 @import "bootstrap";
 
 body {
@@ -25,6 +23,11 @@ body {
 @font-face {
   font-family: "Myriad Pro";
   src: url('../MyriadPro_Regular.otf');
+}
+
+.navbar-inverse {
+  background-color: $deepPurple;
+  border-color: $deepPurple;
 }
 
 /*header {
