@@ -18,11 +18,11 @@ describe "Static pages" do
     it { should have_title('Vanderbilt Performing Arts Council | Mission') }
   end
 
-  describe "Contact page" do
-    before { visit contact_path }
+  describe "AcFee Help page" do
+    before { visit acfee_help_path }
 
-    it { should have_content('Contact') }
-    it { should have_title('Vanderbilt Performing Arts Council | Contact') }
+    it { should have_content('AcFee Help') }
+    it { should have_title('Vanderbilt Performing Arts Council | AcFee Help') }
   end
 
   describe "Calendar page" do
@@ -51,5 +51,12 @@ describe "Static pages" do
 
     it { should have_content('Encore') }
     it { should have_title('Vanderbilt Performing Arts Council | Encore') }
+  end
+
+  describe "Contact page" do
+    before { visit contact_path }
+
+    it { should have_content('Contact') }
+    it { should have_title('Vanderbilt Performing Arts Council | Contact') }
   end
 end

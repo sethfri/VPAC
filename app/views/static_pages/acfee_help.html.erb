@@ -1,0 +1,67 @@
+<% provide(:title, 'AcFee Help') %>
+
+<div class="jumbotron jumbotron-resources">
+  <div class="container">
+    <h1><%= yield(:title) %></h1>
+  </div>
+</div>
+
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="accordion" href="collapse-one">
+                  Topic #1
+                </a>
+              </h4>
+            </div>
+
+            <div id="collapse-one" class="panel-collapse collapse in">
+              <div class="panel-body">
+                This is some text for the first help topic. Hopefully people can find useful advice in this.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="accordion" href="collapse-two">
+                  Topic #2
+                </a>
+              </h4>
+            </div>
+
+            <div id="collapse-two" class="panel-collapse collapse">
+              <div class="panel-body">
+                This is some text for the second help topic. Hopefully people can find useful advice in this.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="accordion" href="collapse-three">
+                  Topic #3
+                </a>
+              </h4>
+            </div>
+
+            <div id="collapse-three" class="panel-collapse collapse">
+              <div class="panel-body">
+                This is some text for the third help topic. Hopefully people can find useful advice in this.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def mission
   end
 
+  def acfee_help
+  end
+
   def calendar
   end
 

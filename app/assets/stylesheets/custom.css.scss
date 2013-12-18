@@ -4,7 +4,8 @@ $brightRed: rgba(160,48,37,1);
 $mutedRed: rgba(160,48,37,0.9);
 
 $redGradient: linear-gradient(to top, rgba(160,48,37,1), rgba(160,48,37,0.95) 82%, rgba(160,48,37,0.9));
-$yellowGradient: linear-gradient(to top, rgba(228,163,39,1), rgba(228, 163,39,0.95) 82%, rgba(228,163,39,0.9));
+$yellowGradient: linear-gradient(to top, rgba(228,163,39,1), rgba(228,163,39,0.95) 82%, rgba(228,163,39,0.9));
+$greenGradient: linear-gradient(to top, rgba(130,169,63,1), rgba(130,169,63,0.95), rgba(130,169,63,0.9));
 
 $whiteTextGradient: linear-gradient(to top, rgba(255,255,255,1), rgba(207,208,210,1));
 
@@ -73,6 +74,10 @@ body {
 
   &.jumbotron-about, &.jumbotron-contact {
     background: $redGradient;
+  }
+
+  &.jumbotron-resources {
+    background: $greenGradient;
   }
 
   &.jumbotron-events {

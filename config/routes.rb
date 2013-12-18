@@ -3,6 +3,8 @@ Vpac::Application.routes.draw do
 
   match '/mission', to: 'static_pages#mission', via: 'get'
 
+  match '/acfee_help', to: 'static_pages#acfee_help', via: 'get'
+
   match '/calendar', to: 'static_pages#calendar', via: 'get'
   match '/spotlight', to: 'static_pages#spotlight', via: 'get'
   match '/main_attraction', to: 'static_pages#main_attraction', via: 'get'
