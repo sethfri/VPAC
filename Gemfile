@@ -3,8 +3,14 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.2'
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 group :production do
@@ -39,5 +45,5 @@ gem 'jbuilder'
 gem 'bootstrap-sass'
 
 group :doc do
-	gem 'sdoc', require:false
+  gem 'sdoc', require:false
 end
