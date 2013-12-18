@@ -2,39 +2,26 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the content" do
-      visit root_path
-    end
-
-    it "should have the title 'Vanderbilt Performing Arts Council'" do
-      visit root_path
-      expect(page).to have_title('Vanderbilt Performing Arts Council')
-    end
+    it { should have_title('Vanderbilt Performing Arts Council') }
+    it { should_not have_title('| Home') }
   end
 
   describe "Mission page" do
-    it "should have the content 'Mission'" do
-      visit mission_path
-      expect(page).to have_content('Mission')
-    end
+    before { visit mission_path }
 
-    it "should have the title 'Vanderbilt Performing Arts Council | Mission'" do
-      visit mission_path
-      expect(page).to have_title('Vanderbilt Performing Arts Council | Mission')
-    end
+    it { should have_content('Mission') }
+    it { should have_title('Vanderbilt Performing Arts Council | Mission') }
   end
 
   describe "Contact page" do
-    it "should have the content 'Contact'" do
-      visit contact_path
-      expect(page).to have_content('Contact')
-    end
+    before { visit contact_path }
 
-    it "should have the title 'Vanderbilt Performing Arts Council | Contact'" do
-      visit contact_path
-      expect(page).to have_title('Vanderbilt Performing Arts Council | Contact')
-    end
+    it { should have_content('Contact') }
+    it { should have_title('Vanderbilt Performing Arts Council | Contact') }
   end
 end
