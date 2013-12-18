@@ -24,4 +24,11 @@ describe "Static pages" do
     it { should have_content('Contact') }
     it { should have_title('Vanderbilt Performing Arts Council | Contact') }
   end
+
+  describe "Spotlight page" do
+    before { visit spotlight_path }
+
+    it { should have_content('Spotlight') }
+    it { should have_title('Vanderbilt Performing Arts Council | Spotlight') }
+  end
 end
