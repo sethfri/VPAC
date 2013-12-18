@@ -1,5 +1,5 @@
 Vpac::Application.routes.draw do
-  root to: 'static_pages#home'
+  root 'static_pages#home'
 
   match '/mission', to: 'static_pages#mission', via: 'get'
 
