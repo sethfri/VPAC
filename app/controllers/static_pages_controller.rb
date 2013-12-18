@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def acfee_help
   end
 
+  def anchor_link_help
+  end
+
   def calendar
   end
 
