@@ -31,4 +31,11 @@ describe "Static pages" do
     it { should have_content('Spotlight') }
     it { should have_title('Vanderbilt Performing Arts Council | Spotlight') }
   end
+
+  describe "Encore page" do
+    before { visit encore_path }
+
+    it { should have_content('Encore') }
+    it { should have_title('Vanderbilt Performing Arts Council | Encore') }
+  end
 end
