@@ -4,6 +4,7 @@ Vpac::Application.routes.draw do
   match '/mission', to: 'static_pages#mission', via: 'get'
 
   match '/spotlight', to: 'static_pages#spotlight', via: 'get'
+  match '/main_attraction', to: 'static_pages#main_attraction', via: 'get'
   match '/encore', to: 'static_pages#encore', via: 'get'
 
   match '/media', to: 'static_pages#media', via: 'get'

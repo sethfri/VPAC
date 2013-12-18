@@ -1,0 +1,20 @@
+<div class="jumbotron jumbotron-events">
+  <div class="container">
+    <h1><%= yield(:title) %></h1>
+  </div>
+</div>
+
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <%= image_tag(yield(:image), alt: 'Poster', class: [ 'img-rounded', 'poster', 'pull-right' ]) %>
+      </div>
+      <div class="col-xs-6">
+        <p class="pull-left"><%= yield(:event_text) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

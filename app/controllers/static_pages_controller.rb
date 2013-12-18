@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def spotlight
   end
 
+  def main_attraction
+  end
+
   def encore
   end
 

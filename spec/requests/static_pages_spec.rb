@@ -38,4 +38,11 @@ describe "Static pages" do
     it { should have_content('Encore') }
     it { should have_title('Vanderbilt Performing Arts Council | Encore') }
   end
+
+  describe "Main Attraction page" do
+    before { visit main_attraction_path }
+
+    it { should have_content('Main Attraction') }
+    it { should have_title('Vanderbilt Performing Arts Council | Main Attraction') }
+  end
 end
