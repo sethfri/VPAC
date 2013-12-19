@@ -1,0 +1,29 @@
+<h1>Listing acfee_topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acfee_topics.each do |acfee_topic| %>
+      <tr>
+        <td><%= acfee_topic.name %></td>
+        <td><%= acfee_topic.content %></td>
+        <td><%= link_to 'Show', acfee_topic %></td>
+        <td><%= link_to 'Edit', edit_acfee_topic_path(acfee_topic) %></td>
+        <td><%= link_to 'Destroy', acfee_topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acfee topic', new_acfee_topic_path %>

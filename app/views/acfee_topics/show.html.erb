@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @acfee_topic.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @acfee_topic.content %>
+</p>
+
+<%= link_to 'Edit', edit_acfee_topic_path(@acfee_topic) %> |
+<%= link_to 'Back', acfee_topics_path %>

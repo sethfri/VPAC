@@ -4,8 +4,7 @@
     <data-source source="LOCAL" name="Rails vpac: test" uuid="503c4b2b-f7a2-4346-b85e-cc2824b38bb1">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:vpac_test</jdbc-url>
-      <user-name>vpac</user-name>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>

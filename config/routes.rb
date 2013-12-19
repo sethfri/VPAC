@@ -1,9 +1,11 @@
 Vpac::Application.routes.draw do
+  resources :acfee_topics
+
   root 'static_pages#home'
 
   match '/mission', to: 'static_pages#mission', via: 'get'
 
-  match '/acfee_help', to: 'static_pages#acfee_help', via: 'get'
+  match '/acfee_help', to: 'acfee_topics#index', via: 'get'
   match '/anchor_link_help', to: 'static_pages#anchor_link_help', via: 'get'
 
   match '/calendar', to: 'static_pages#calendar', via: 'get'
