@@ -1,0 +1,29 @@
+<% provide(:title, 'Current Board') %>
+
+<div class="jumbotron jumbotron-about">
+  <div class="container">
+    <h1><%= yield(:title) %></h1>
+  </div>
+</div>
+
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled list-inline">
+          <% @board_members.each do |board_member| %>
+            <li class="board-list-item">
+              <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'board-thumbnail') %>
+              <div class="caption">
+                <h3><%= board_member.name %></h3>
+                <h4><%= board_member.position %></h4>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

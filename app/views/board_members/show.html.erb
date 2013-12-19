@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @board_member.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @board_member.position %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @board_member.bio %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @board_member.photo_url %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @board_member.email %>
+</p>
+
+<%= link_to 'Edit', edit_board_member_path(@board_member) %> |
+<%= link_to 'Back', board_members_path %>

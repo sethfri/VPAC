@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219084707) do
+ActiveRecord::Schema.define(version: 20131219093855) do
 
   create_table "acfee_topics", force: true do |t|
     t.string   "name"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20131219084707) do
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "board_members", force: true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.string   "photo_url"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "position"
   end
 
 end
