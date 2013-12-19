@@ -15,8 +15,8 @@
             <li class="board-list-item">
               <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'board-thumbnail') %>
               <div class="caption">
-                <h3><%= board_member.name %></h3>
-                <h4><%= board_member.position %></h4>
+                <h4><%= board_member.name %></h4>
+                <p><%= board_member.position %></p>
               </div>
             </li>
           <% end %>
