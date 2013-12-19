@@ -1,0 +1,40 @@
+<% provide(:title, 'Anchor Link Help') %>
+
+<div class="jumbotron jumbotron-resources">
+  <div class="container">
+    <h1><%= yield(:title) %></h1>
+  </div>
+</div>
+
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel-group" id="accordion">
+          <% topic_count = 0
+             @anchor_link_topics.each do |anchor_link_topic|
+               topic_count += 1
+               ref_name = anchor_link_topic.name.tr('#', '').downcase.split(' ').join('-') %>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#<%= ref_name %>">
+                      <%= anchor_link_topic.name %>
+                    </a>
+                  </h4>
+                </div>
+
+                <div id="<%= ref_name %>" class="panel-collapse collapse<%= ' in' if topic_count.eql?(1) %>">
+                  <div class="panel-body">
+                    <%= anchor_link_topic.content %>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

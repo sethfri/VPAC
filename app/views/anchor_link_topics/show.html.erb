@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @anchor_link_topic.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @anchor_link_topic.content %>
+</p>
+
+<%= link_to 'Edit', edit_anchor_link_topic_path(@anchor_link_topic) %> |
+<%= link_to 'Back', anchor_link_topics_path %>

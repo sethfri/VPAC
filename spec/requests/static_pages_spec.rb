@@ -18,13 +18,6 @@ describe "Static pages" do
     it { should have_title('Vanderbilt Performing Arts Council | Mission') }
   end
 
-  describe "Anchor Link Help page" do
-    before { visit anchor_link_help_path }
-
-    it { should have_content('Anchor Link Help') }
-    it { should have_title('Vanderbilt Performing Arts Council | Anchor Link Help') }
-  end
-
   describe "Calendar page" do
     before { visit calendar_path }
 

@@ -1,0 +1,2 @@
+module AnchorLinkTopicsHelper
+end

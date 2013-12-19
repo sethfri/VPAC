@@ -5,9 +5,6 @@ class StaticPagesController < ApplicationController
   def mission
   end
 
-  def anchor_link_help
-  end
-
   def calendar
   end
 

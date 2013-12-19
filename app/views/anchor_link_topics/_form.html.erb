@@ -1,0 +1,25 @@
+<%= form_for(@anchor_link_topic) do |f| %>
+  <% if @anchor_link_topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anchor_link_topic.errors.count, "error") %> prohibited this anchor_link_topic from being saved:</h2>
+
+      <ul>
+      <% @anchor_link_topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

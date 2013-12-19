@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219073021) do
+ActiveRecord::Schema.define(version: 20131219084707) do
 
   create_table "acfee_topics", force: true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "anchor_link_topics", force: true do |t|
     t.string   "name"
     t.string   "content"
     t.datetime "created_at"
