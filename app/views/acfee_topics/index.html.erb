@@ -1,29 +1,40 @@
-<h1>Listing acfee_topics</h1>
+<% provide(:title, 'AcFee Help') %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="jumbotron jumbotron-resources">
+  <div class="container">
+    <h1><%= yield(:title) %></h1>
+  </div>
+</div>
 
-  <tbody>
-    <% @acfee_topics.each do |acfee_topic| %>
-      <tr>
-        <td><%= acfee_topic.name %></td>
-        <td><%= acfee_topic.content %></td>
-        <td><%= link_to 'Show', acfee_topic %></td>
-        <td><%= link_to 'Edit', edit_acfee_topic_path(acfee_topic) %></td>
-        <td><%= link_to 'Destroy', acfee_topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel-group" id="accordion">
+          <% topic_count = 0
+             @acfee_topics.each do |acfee_topic|
+               topic_count += 1
+               ref_name = acfee_topic.name.tr('#', '').downcase.split(' ').join('-') %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#<%= ref_name %>">
+                    <%= acfee_topic.name %>
+                  </a>
+                </h4>
+              </div>
 
-<br>
+              <div id="<%= ref_name %>" class="panel-collapse collapse<%= ' in' if topic_count.eql?(1) %>">
+                <div class="panel-body">
+                  <%= acfee_topic.content %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'New Acfee topic', new_acfee_topic_path %>
+<%= render 'layouts/footer' %>

@@ -18,13 +18,6 @@ describe "Static pages" do
     it { should have_title('Vanderbilt Performing Arts Council | Mission') }
   end
 
-  describe "AcFee Help page" do
-    before { visit acfee_help_path }
-
-    it { should have_content('AcFee Help') }
-    it { should have_title('Vanderbilt Performing Arts Council | AcFee Help') }
-  end
-
   describe "Anchor Link Help page" do
     before { visit anchor_link_help_path }
 
