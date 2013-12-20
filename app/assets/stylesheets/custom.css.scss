@@ -26,6 +26,10 @@ body {
   src: url('../MyriadPro_Regular.otf');
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-inverse {
   background-color: $deepPurple;
   border-color: $deepPurple;
