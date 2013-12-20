@@ -9,19 +9,27 @@
 <div class="container-content">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <ul class="list-unstyled list-inline">
-          <% @board_members.each do |board_member| %>
-            <li class="board-list-item">
-              <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'board-thumbnail') %>
-              <div class="caption">
-                <h4><%= board_member.name %></h4>
-                <p><%= board_member.position %></p>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-      </div>
+      <% @board_members[0..5].each do |board_member| %>
+        <div class="col-xs-4 col-md-2">
+          <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'center-block board-thumbnail img-rounded') %>
+          <div class="caption">
+            <h4 class="text-center"><%= board_member.name %></h4>
+            <p class="text-center"><%= board_member.position %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <% @board_members[6..10].each do |board_member| %>
+        <div class="col-xs-4 col-md-2">
+          <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'center-block board-thumbnail img-rounded') %>
+          <div class="caption">
+            <h4 class="text-center"><%= board_member.name %></h4>
+            <p class="text-center"><%= board_member.position %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
