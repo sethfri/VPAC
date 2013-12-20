@@ -1,5 +1,6 @@
 Vpac::Application.routes.draw do
   resources :board_members
+  resources :current_board, controller: :board_members, only: [:index, :show]
 
   resources :acfee_topics
   resources :anchor_link_topics
@@ -7,7 +8,6 @@ Vpac::Application.routes.draw do
   root 'static_pages#home'
 
   match '/mission', to: 'static_pages#mission', via: 'get'
-  match '/current_board', to: 'board_members#index', via: 'get'
 
   match '/acfee_help', to: 'acfee_topics#index', via: 'get'
   match '/anchor_link_help', to: 'anchor_link_topics#index', via: 'get'
