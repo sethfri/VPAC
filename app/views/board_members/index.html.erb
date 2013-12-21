@@ -8,33 +8,28 @@
 
 <div class="container-content">
   <div class="container">
-    <div class="row">
-      <% @board_members[0..5].each do |board_member| %>
-        <div class="col-xs-4 col-md-2">
-          <%= link_to current_board_path(board_member) do %>
-            <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'center-block board-thumbnail img-rounded') %>
-            <div class="caption">
-              <h4 class="text-center"><%= board_member.name %></h4>
-              <p class="text-center"><%= board_member.position %></p>
-            </div>
-          <% end %>
+    <% @board_members.each do |board_member| %>
+      <div class="row board-member-row">
+        <div class="col-xs-12 col-sm-3 col-sm-offset-2">
+          <%= image_tag board_member.photo_url, alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo pull-right' %>
         </div>
-      <% end %>
-    </div>
 
-    <div class="row">
-      <% @board_members[6..10].each do |board_member| %>
-        <div class="col-xs-4 col-md-2">
-          <%= link_to current_board_path(board_member) do %>
-            <%= image_tag(board_member.photo_url, alt: "Photo of #{board_member.name}", class: 'center-block board-thumbnail img-rounded') %>
-            <div class="caption">
-              <h4 class="text-center"><%= board_member.name %></h4>
-              <p class="text-center"><%= board_member.position %></p>
-            </div>
-          <% end %>
+        <div class="col-xs-12 col-sm-6">
+          <div class="caption">
+            <h3 class="top-column-header">Name</h3>
+            <p class="lead"><%= board_member.name %></p>
+
+            <h3 class="column-header">Board Position</h3>
+            <p class="lead"><%= board_member.position %></p>
+
+            <h3 class="column-header">Bio</h3>
+            <p class="lead"><%= board_member.bio %></p>
+
+            <p class="lead"><%= mail_to board_member.email, "Email #{ board_member.name.split(' ')[0] }" %></p>
+          </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 

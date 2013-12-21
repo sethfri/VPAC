@@ -1,28 +1,3 @@
-<% provide(:title, @board_member.name) %>
-
-<div class="jumbotron jumbotron-about">
-  <div class="container">
-    <h1><%= @board_member.name %> <small><%= @board_member.position %></small></h1>
-  </div>
-</div>
-
-<div class="container-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4">
-        <%= image_tag(@board_member.photo_url, alt: "Photo of #{@board_member.name}", class: 'board-photo img-rounded') %>
-      </div>
-
-      <div class="col-xs-8">
-        <p><%= @board_member.bio %></p>
-        <p><%= mail_to(@board_member.email, "Email #{@board_member.name.split(' ')[0]}") %></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<%= render 'layouts/footer' %>
-
 <p id="notice"><%= notice %></p>
 
 <p>

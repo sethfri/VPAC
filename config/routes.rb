@@ -1,6 +1,6 @@
 Vpac::Application.routes.draw do
   resources :board_members
-  resources :current_board, controller: :board_members, only: [:index, :show]
+  resources :current_board, controller: :board_members, only: [:index]
 
   resources :acfee_topics
   resources :anchor_link_topics
