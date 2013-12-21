@@ -18,6 +18,13 @@ describe "Static pages" do
     it { should have_title('Vanderbilt Performing Arts Council | Mission') }
   end
 
+  describe "History page" do
+    before { visit history_path }
+
+    it { should have_content('History') }
+    it { should have_title('Vanderbilt Performing Arts Council | History') }
+  end
+
   describe "Calendar page" do
     before { visit calendar_path }
 

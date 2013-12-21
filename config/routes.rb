@@ -8,6 +8,7 @@ Vpac::Application.routes.draw do
   root 'static_pages#home'
 
   match '/mission', to: 'static_pages#mission', via: 'get'
+  match '/history', to: 'static_pages#history', via: 'get'
 
   match '/acfee_help', to: 'acfee_topics#index', via: 'get'
   match '/anchor_link_help', to: 'anchor_link_topics#index', via: 'get'
