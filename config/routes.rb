@@ -1,4 +1,6 @@
 Vpac::Application.routes.draw do
+  resources :member_groups
+
   resources :board_members
   resources :current_board, controller: :board_members, only: [:index]
 
