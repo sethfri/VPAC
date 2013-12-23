@@ -70,7 +70,7 @@ body {
       position: absolute;
       top: 0;
       left: 0;
-      min-width: 100%;
+      width: 100%;
       height: 650px;
     }
   }
@@ -154,25 +154,15 @@ footer {
     text-align: center;
     line-height: 29px;
     margin-top: 22px;
-    margin-bottom: 13px;
 
-    * {
-      line-height: inherit;
+    ul li.divider {
+      padding-left: 25px;
+      padding-right: 25px;
     }
 
-    ul {
-      width: 320px;
-      margin-left: auto;
-      margin-right: auto;
-
-      li {
-        display: inline-block;
-
-        &.divider {
-          margin-left: 33px;
-          margin-right: 33px;
-        }
-      }
+    ul li#anchor-logo {
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 
