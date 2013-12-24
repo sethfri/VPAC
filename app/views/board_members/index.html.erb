@@ -8,27 +8,28 @@
 
 <div class="container-content">
   <div class="container">
-    <ul class="media-list">
-      <% @board_members.each do |board_member| %>
-        <li class="media">
-          <%= link_to '#', class: 'pull-left' do
-            image_tag board_member.photo_url, alt: "Photo of #{ board_member.name }", class: 'media-object board-photo'
-          end %>
-          <div class="media-body">
-            <h3 class="media-heading">Name</h3>
+    <% @board_members.each do |board_member| %>
+      <div class="row board-member-row">
+        <div class="col-xs-12 col-sm-3">
+          <%= image_tag board_member.photo_url, alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo img-responsive' %>
+        </div>
+
+        <div class="col-xs-12 col-sm-9">
+          <div class="caption">
+            <h3 class="top-column-header">Name</h3>
             <p class="lead"><%= board_member.name %></p>
 
-            <h3 class="media-heading">Board Position</h3>
+            <h3 class="column-header">Board Position</h3>
             <p class="lead"><%= board_member.position %></p>
 
-            <h3 class="media-heading">Bio</h3>
+            <h3 class="column-header">Bio</h3>
             <p class="lead"><%= board_member.bio %></p>
 
             <p class="lead"><%= mail_to board_member.email, "Email #{ board_member.name.split(' ')[0] }" %></p>
           </div>
-        </li>
-      <% end %>
-    </ul>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 
