@@ -102,7 +102,7 @@ body {
 }
 
 #mission-image-container {
-  background-image: url('mission.png');
+  background-image: url(image_path('mission.png'));
   background-repeat: no-repeat;
   //background-position: -100px -350px;
   background-size: cover;
