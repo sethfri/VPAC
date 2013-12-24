@@ -11,8 +11,10 @@ img.board-photo {
   height: 425px;
 }
 
-.top-column-header {
-  margin-top: 0;
+@media (min-width: 768px) {
+  .top-column-header {
+    margin-top: 0;
+  }
 }
 
 .top-column-header, .column-header {
