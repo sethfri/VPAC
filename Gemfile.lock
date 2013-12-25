@@ -45,6 +45,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dalli (2.6.4)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -61,6 +62,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
@@ -152,8 +154,10 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails
+  dalli
   jbuilder
   jquery-rails
+  memcachier
   pg
   rails (= 4.0.2)
   rails_12factor

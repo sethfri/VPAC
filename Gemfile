@@ -47,3 +47,7 @@ gem 'bootstrap-sass'
 group :doc do
   gem 'sdoc', require:false
 end
+
+# Faster Heroku deploys
+gem 'dalli'
+gem 'memcachier'
