@@ -4,7 +4,9 @@ class MemberGroupsController < ApplicationController
   # GET /member_groups
   # GET /member_groups.json
   def index
-    @member_groups = MemberGroup.all
+    @member_groups = MemberGroup.all.sort_by do |member_group|
+      member_group.name.gsub(/\bThe \b/, '')
+    end
   end
 
   # GET /member_groups/1
