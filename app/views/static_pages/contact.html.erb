@@ -8,21 +8,21 @@
 
 <div class="container-content">
   <div class="container">
-    <form role="form">
+    <%= form_tag(send_mail_path) do %>
       <div class="form-group">
-        <label for="name-input">Name</label>
-        <input type="text" class="form-control" id="name-input" placeholder="Your Name">
+        <%= label_tag 'name', 'Name' %>
+        <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name' %>
       </div>
       <div class="form-group">
-        <label for="email-input">Email Address</label>
-        <input type="email" class="form-control" id="email-input" placeholder="Your Email Address">
+        <%= label_tag 'email', 'Email' %>
+        <%= email_field_tag 'email', nil, class: 'form-control', placeholder: 'Your Email Address' %>
       </div>
       <div class="form-group">
-        <label for="comments-input">Comments</label>
-        <textarea class="form-control" rows="4" placeholder="Comments..."></textarea>
+        <%= label_tag 'comments', 'Comments' %>
+        <%= text_area_tag 'comments', nil, class: 'form-control', rows: 4, placeholder: 'Comments...' %>
       </div>
-      <button type="submit" class="btn btn-default btn-about pull-right">Submit</button>
-    </form>
+      <%= submit_tag nil, class: 'btn btn-default btn-about pull-right' %>
+    <% end %>
   </div>
 </div>
 

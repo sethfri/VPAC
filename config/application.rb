@@ -50,5 +50,9 @@ module Vpac
     config.assets.version = '1.0'
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
   end
 end
