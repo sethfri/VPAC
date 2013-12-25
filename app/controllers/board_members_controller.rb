@@ -4,7 +4,9 @@ class BoardMembersController < ApplicationController
   # GET /board_members
   # GET /board_members.json
   def index
-    @board_members = BoardMember.all
+    @board_members = BoardMember.all.sort_by do |board_member|
+      board_member.id
+    end
   end
 
   # GET /board_members/1
