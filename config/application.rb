@@ -51,8 +51,14 @@ module Vpac
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
-    config.action_mailer.delivery_method = :sendmail
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
+
+    ActionMailer::Base.smtp_settings = {
+        address: 'smtp.mandrillapp.com',
+        port: 587,
+        user_name: ENV['MAILER_USERNAME'],
+        password: ENV['MAILER_PASSWORD']
+    }
   end
 end
