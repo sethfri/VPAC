@@ -57,8 +57,8 @@ module Vpac
     ActionMailer::Base.smtp_settings = {
         address: 'smtp.mandrillapp.com',
         port: 587,
-        user_name: ENV['MAILER_USERNAME'],
-        password: ENV['MAILER_PASSWORD']
+        user_name: ENV['MANDRILL_USERNAME'],
+        password: ENV['MANDRILL_APIKEY']
     }
   end
 end
