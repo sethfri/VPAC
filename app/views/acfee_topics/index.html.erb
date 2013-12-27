@@ -1,36 +1,14 @@
 <% provide(:title, 'AcFee Help') %>
+<% provide(:jumbotron_class, 'jumbotron-resources') %>
 
-<div class="jumbotron jumbotron-resources">
-  <div class="container">
-    <h1><%= yield(:title) %></h1>
-  </div>
-</div>
+<%= render 'layouts/jumbotron' %>
 
 <div class="container-content">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <div class="panel-group" id="accordion">
-          <% topic_count = 0
-             @acfee_topics.each do |acfee_topic|
-               topic_count += 1
-               ref_name = acfee_topic.name.tr('#', '').downcase.split(' ').join('-') %>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#<%= ref_name %>">
-                    <%= acfee_topic.name %>
-                  </a>
-                </h4>
-              </div>
-
-              <div id="<%= ref_name %>" class="panel-collapse collapse<%= ' in' if topic_count.eql?(1) %>">
-                <div class="panel-body">
-                  <%= acfee_topic.content %>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render partial: 'layouts/topic', collection: @acfee_topics %>
         </div>
       </div>
     </div>
