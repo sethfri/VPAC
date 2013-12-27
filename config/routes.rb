@@ -1,4 +1,6 @@
 Vpac::Application.routes.draw do
+  resources :publicity_topics
+
   resources :member_groups
 
   resources :board_members
@@ -12,6 +14,7 @@ Vpac::Application.routes.draw do
   match '/mission', to: 'static_pages#mission', via: 'get'
   match '/history', to: 'static_pages#history', via: 'get'
 
+  match 'publicity_help', to: 'publicity_topics#index', via: 'get'
   match '/acfee_help', to: 'acfee_topics#index', via: 'get'
   match '/anchor_link_help', to: 'anchor_link_topics#index', via: 'get'
 

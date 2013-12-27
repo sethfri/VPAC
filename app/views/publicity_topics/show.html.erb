@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @publicity_topic.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @publicity_topic.content %>
+</p>
+
+<%= link_to 'Edit', edit_publicity_topic_path(@publicity_topic) %> |
+<%= link_to 'Back', publicity_topics_path %>

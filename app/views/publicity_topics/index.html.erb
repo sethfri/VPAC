@@ -1,0 +1,18 @@
+<% provide(:title, 'Publicity Help') %>
+<% provide(:jumbotron_class, 'resources') %>
+
+<%= render 'layouts/jumbotron' %>
+
+<div class="container-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel-group" id="accordion">
+          <%= render partial: 'layouts/topic', collection: @publicity_topics %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>
