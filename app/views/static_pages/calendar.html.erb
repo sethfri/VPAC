@@ -1,10 +1,7 @@
 <% provide(:title, 'Calendar') %>
+<% provide(:jumbotron_class, 'events') %>
 
-<div class="jumbotron jumbotron-events">
-  <div class="container">
-    <h1><%= yield(:title) %></h1>
-  </div>
-</div>
+<%= render 'layouts/jumbotron' %>
 
 <div class="container-content">
   <div class="container">
