@@ -10,7 +10,7 @@
 
   <div id="<%= ref_name %>" class="panel-collapse collapse<%= ' in' if topic_counter.eql?(0) %>">
     <div class="panel-body">
-      <%= topic.content %>
+      <%= topic.content.html_safe %>
     </div>
   </div>
 </div>
