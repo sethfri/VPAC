@@ -64,7 +64,7 @@ body {
   height: 660px;
 
   @media (max-width: 768px) {
-    height: 400px;
+    height: 340px;
   }
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 #first-item, #second-item {
-  background-image: url('vutgroup.jpg');
+  background-image: url(image_path('vutgroup.jpg'));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -82,7 +82,7 @@ body {
 }
 
 #second-item {
-  background-image: url('24hour.jpg');
+  background-image: url(image_path('24hour.jpg'));
 }
 
 // Jumbotron
