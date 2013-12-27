@@ -1,4 +1,4 @@
-<% ref_name = topic.name.tr('#', '').tr('?', '').downcase.split(' ').join('-') %>
+<% ref_name = topic.name.tr('#?@/', '').downcase.split(' ').join('-') %>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h4 class="panel-title">
