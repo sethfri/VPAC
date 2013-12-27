@@ -4,7 +4,9 @@ class AnchorLinkTopicsController < ApplicationController
   # GET /anchor_link_topics
   # GET /anchor_link_topics.json
   def index
-    @anchor_link_topics = AnchorLinkTopic.all
+    @anchor_link_topics = AnchorLinkTopic.all.sort_by do |topic|
+      topic.id
+    end
   end
 
   # GET /anchor_link_topics/1

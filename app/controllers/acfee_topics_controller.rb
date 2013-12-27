@@ -4,7 +4,9 @@ class AcfeeTopicsController < ApplicationController
   # GET /acfee_topics
   # GET /acfee_topics.json
   def index
-    @acfee_topics = AcfeeTopic.all
+    @acfee_topics = AcfeeTopic.all.sort_by do |topic|
+      topic.id
+    end
   end
 
   # GET /acfee_topics/1

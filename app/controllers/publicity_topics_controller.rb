@@ -4,7 +4,9 @@ class PublicityTopicsController < ApplicationController
   # GET /publicity_topics
   # GET /publicity_topics.json
   def index
-    @publicity_topics = PublicityTopic.all
+    @publicity_topics = PublicityTopic.all.sort_by do |topic|
+      topic.id
+    end
   end
 
   # GET /publicity_topics/1
