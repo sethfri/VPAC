@@ -1,10 +1,7 @@
 <% provide(:title, 'Member Groups') %>
+<% provide(:jumbotron_class, 'about') %>
 
-<div class="jumbotron jumbotron-about">
-  <div class="container">
-    <h1><%= yield(:title) %></h1>
-  </div>
-</div>
+<%= render 'layouts/jumbotron' %>
 
 <div class="container-content">
   <div class="container">
