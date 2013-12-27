@@ -7,11 +7,13 @@
 <div class="container-content">
   <div class="container">
     <div class="row">
-      <div class="col-xs-6">
-        <%= image_tag(yield(:image), alt: 'Poster', class: [ 'img-rounded', 'poster', 'pull-right' ]) %>
+      <div class="col-xs-12 col-sm-6">
+        <%= image_tag yield(:image),
+                      alt: 'Event poster',
+                      class: 'img-rounded poster img-responsive' %>
       </div>
-      <div class="col-xs-6">
-        <p class="pull-left"><%= yield(:event_text) %></p>
+      <div class="col-xs-12 col-sm-6">
+        <p class="event-description"><%= yield(:event_text) %></p>
       </div>
     </div>
   </div>
