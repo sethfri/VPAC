@@ -63,7 +63,7 @@ body {
 .carousel, .item {
   height: 660px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $screen-sm-min) {
     height: 340px;
   }
 }
@@ -125,10 +125,11 @@ body {
 // Contact Form
 
 form {
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
-  //margin-bottom: 75px;
+  @media (min-width: $screen-sm-min) {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   /*font-family: "Avenir Light";
   font-size: 1.725em;*/
@@ -164,7 +165,7 @@ form {
   height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $screen-xs-max) {
   .event-description {
     margin-top: 20px;
   }
