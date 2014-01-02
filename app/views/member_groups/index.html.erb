@@ -6,28 +6,28 @@
 <div class="container-content">
   <div class="container">
     <% @member_groups.each do |member_group| %>
-        <div class="row member-group-row">
-          <div class="col-xs-12 col-sm-5">
-            <%= image_tag member_group.photo_url, alt: "Photo of #{ member_group.name }", class: 'img-rounded member-group-photo img-responsive' %>
-          </div>
+      <div class="row member-group-row">
+        <div class="col-xs-12 col-sm-5">
+          <%= image_tag member_group.photo_url, alt: "Photo of #{ member_group.name }", class: 'img-rounded member-group-photo img-responsive' %>
+        </div>
 
-          <div class="col-xs-12 col-sm-7">
-            <div class="caption">
-              <h3 class="top-column-header">Name</h3>
-              <p class="lead"><%= member_group.name %></p>
+        <div class="col-xs-12 col-sm-7">
+          <div class="caption">
+            <h3 class="top-column-header">Name</h3>
+            <p class="lead"><%= member_group.name %></p>
 
-              <h3 class="column-header">Primary Contact</h3>
-              <%= mail_to member_group.email do %>
-                <p class="lead"><%= member_group.primary_contact %></p>
-              <% end %>
+            <h3 class="column-header">Primary Contact</h3>
+            <%= mail_to member_group.email do %>
+              <p class="lead"><%= member_group.primary_contact %></p>
+            <% end %>
 
-              <h3 class="column-header">Description</h3>
-              <p class="lead"><%= member_group.description %></p>
+            <h3 class="column-header">Description</h3>
+            <p class="lead"><%= member_group.description %></p>
 
-              <!--<p class="lead"><#%= mail_to board_member.email, "Email #{ board_member.name.split(' ')[0] }" %></p>-->
-            </div>
+            <!--<p class="lead"><#%= mail_to board_member.email, "Email #{ board_member.name.split(' ')[0] }" %></p>-->
           </div>
         </div>
+      </div>
     <% end %>
   </div>
 </div>

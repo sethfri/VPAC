@@ -122,6 +122,32 @@ body {
   margin-bottom: 30px;
 }
 
+// Current Board and Member Groups
+
+.board-member-row, .member-group-row {
+  margin-bottom: 20px;
+}
+
+img.board-photo, img.member-group-photo {
+  width: 458px;
+  height: 458px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .top-column-header {
+    margin-top: 0;
+  }
+}
+
+.top-column-header, .column-header {
+  margin-bottom: 5px;
+}
+
 // Contact Form
 
 form {
