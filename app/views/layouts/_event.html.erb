@@ -14,6 +14,9 @@
       </div>
       <div class="col-xs-12 col-sm-6">
         <p class="event-description"><%= yield(:event_text) %></p>
+        <% unless yield(:schedule_text).blank? %>
+            <p class="event-schedule"><%= yield(:schedule_text) %></p>
+        <% end %>
       </div>
     </div>
   </div>
