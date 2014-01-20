@@ -3,6 +3,11 @@ $lightGray: #b5b5b5;
 $brightRed: rgba(160,48,37,1);
 $mutedRed: rgba(160,48,37,0.9);
 
+$aboutRed: #b63b31;
+$resourcesGreen: #86a90f;
+$eventsYellow: #e3a32b;
+$mediaBlue: #216694;
+
 $redGradient: linear-gradient(to top, rgba(182,59,49,1), rgba(182,59,49,0.95) 82%, rgba(182,59,49,0.9));
 $yellowGradient: linear-gradient(to top, rgba(227,163,43,1), rgba(227,163,43,0.95) 82%, rgba(227,163,43,0.9));
 $greenGradient: linear-gradient(to top, rgba(134,169,15,1), rgba(134,169,15,0.95) 82%, rgba(134,169,15,0.9));
@@ -40,6 +45,59 @@ body {
 
 .navbar-brand {
   padding: 5px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-right .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.navbar-inverse .navbar-nav {
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdown-menu > li > a {
+    text-decoration: none;
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  &#dropdown-toggle-about {
+    background-color: $aboutRed;
+  }
+
+  &#dropdown-toggle-resources {
+    background-color: $resourcesGreen;
+  }
+
+  &#dropdown-toggle-events {
+    background-color: $eventsYellow;
+  }
+}
+
+.dropdown-menu {
+  border-top: 0;
+
+  &#dropdown-menu-about {
+    background-color: $aboutRed;
+  }
+
+  &#dropdown-menu-resources {
+    background-color: $resourcesGreen;
+  }
+
+  &#dropdown-menu-events {
+    background-color: $eventsYellow;
+  }
+
+  > li > a {
+    color: white;
+  }
 }
 
 /*header {
