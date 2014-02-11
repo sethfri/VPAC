@@ -8,7 +8,7 @@
     <% @board_members.each do |board_member| %>
       <div class="row board-member-row">
         <div class="col-xs-12 col-sm-5">
-          <%= image_tag board_member.photo_url, alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo img-responsive' %>
+          <%= image_tag "#{ board_member.name }.jpg", alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo img-responsive' %>
         </div>
 
         <div class="col-xs-12 col-sm-7">
