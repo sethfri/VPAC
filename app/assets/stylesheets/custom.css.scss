@@ -131,7 +131,6 @@ body {
 }
 
 #first-item, #second-item {
-  background-image: url(image_path('vutgroup.jpg'));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -139,8 +138,24 @@ body {
   //height: 202.32px;
 }
 
+#first-item {
+  background-image: url(image_path('carousel1.png'));
+}
+
 #second-item {
-  background-image: url(image_path('24hour.jpg'));
+  background-image: url(image_path('carousel2.png'));
+}
+
+#third-item {
+  background-image: url(image_path('carousel3.png'));
+}
+
+#fourth-item {
+  background-image: url(image_path('carousel4.png'));
+}
+
+#fifth-item {
+  background-image: url(image_path('carousel5.png'));
 }
 
 // Jumbotron
