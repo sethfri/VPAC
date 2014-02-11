@@ -47,9 +47,9 @@ module Vpac
     # config.active_record.schema_format = :sql
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0.2'
+    config.assets.version = '1.0.3'
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    #config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
