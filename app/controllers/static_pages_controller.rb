@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def calendar
   end
 
+  def auditions
+  end
+
   def spotlight
   end
 

@@ -20,6 +20,7 @@ Vpac::Application.routes.draw do
   match '/anchor_link_help', to: 'anchor_link_topics#index', via: 'get'
 
   match '/calendar', to: 'static_pages#calendar', via: 'get'
+  match '/auditions', to: 'static_pages#auditions', via: 'get'
   match '/spotlight', to: 'static_pages#spotlight', via: 'get'
   match '/main_attraction', to: 'static_pages#main_attraction', via: 'get'
   match '/encore', to: 'static_pages#encore', via: 'get'
