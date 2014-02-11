@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def mission
   end
 
+  def reserve_space
+  end
+
   def calendar
   end
 
