@@ -51,6 +51,12 @@ body {
   color: white;
 }
 
+@media (max-width: $screen-xs-max) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+  }
+}
+
 .navbar-right .dropdown-menu {
   right: auto;
   left: 0;
