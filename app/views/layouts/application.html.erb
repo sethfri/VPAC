@@ -9,6 +9,12 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+<% if flash[:sent] %>
+  <div class="alert alert-success alert-dismissable">
+    <%= button_tag '&times;'.html_safe, type: 'button', class: 'close', data: { dismiss: 'alert' } %>
+    <%= flash[:sent] %>
+  </div>
+<% end %>
 <%= yield %>
 </body>
 </html>

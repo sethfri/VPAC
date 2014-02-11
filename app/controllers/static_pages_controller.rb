@@ -28,6 +28,8 @@ class StaticPagesController < ApplicationController
     email = params[:email]
     body = params[:comments]
     ContactMailer.contact_email(name, email, body).deliver
-    redirect_to contact_path, notice: 'Message sent'
+
+    flash[:sent] = 'Message sent!'
+    redirect_to contact_path
   end
 end
