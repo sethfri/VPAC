@@ -16,11 +16,6 @@
             <h3 class="top-column-header">Name</h3>
             <p class="lead"><%= link_to member_group.name, member_group.website_url %></p>
 
-            <h3 class="column-header">Primary Contact</h3>
-            <%= mail_to member_group.email do %>
-              <p class="lead"><%= member_group.primary_contact %></p>
-            <% end %>
-
             <h3 class="column-header">Description</h3>
             <p class="lead"><%= member_group.description %></p>
 
