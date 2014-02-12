@@ -13,9 +13,9 @@
                       class: 'img-rounded poster img-responsive' %>
       </div>
       <div class="col-xs-12 col-sm-6">
-        <p class="event-description"><%= yield(:event_text) %></p>
+        <p class="event-description lead"><%= yield(:event_text) %></p>
         <% unless yield(:schedule_text).blank? %>
-            <p class="event-schedule"><%= yield(:schedule_text) %></p>
+            <p class="event-schedule lead"><%= yield(:schedule_text) %></p>
         <% end %>
       </div>
     </div>
