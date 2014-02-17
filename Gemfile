@@ -48,6 +48,9 @@ group :doc do
   gem 'sdoc', require:false
 end
 
+# New Relic
+gem 'newrelic_rpm'
+
 # Faster Heroku deploys
 gem 'dalli'
 gem 'memcachier'
