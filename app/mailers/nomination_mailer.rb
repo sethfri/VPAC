@@ -1,5 +1,5 @@
 class NominationMailer < ActionMailer::Base
-  default from: ENV['MAILER_VPAC']
+  default from: ENV['MAILER_VPAC'], bcc: ENV['MAILER_VPAC']
 
   def nomination_email(nominee, nominator, email)
     @nominee = nominee
