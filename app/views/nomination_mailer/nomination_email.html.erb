@@ -9,10 +9,10 @@
 <p>Dear <%= @nominee %>,</p>
 <p>
   Congratulations!
-  <%= if @nominator
-        @nominator
-      else
+  <%= if @nominator.blank?
         'Someone'
+      else
+        @nominator
       end %>
    thinks you would be a great fit for the Vanderbilt Performing Arts Council (VPAC) Board! If you haven't already
   started an application, please consider doing so today! The form is located on <%= link_to 'Anchor Link', 'http://google.com' %>.
