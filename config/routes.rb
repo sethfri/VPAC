@@ -27,8 +27,10 @@ Vpac::Application.routes.draw do
 
   match '/media', to: 'static_pages#media', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/nomination', to: 'static_pages#nomination', via: 'get'
 
-  match '/send_mail', to: 'static_pages#send_mail', via: 'post'
+  match '/send_contact_email', to: 'static_pages#send_contact_email', via: 'post'
+  match '/send_nomination_email', to: 'static_pages#send_nomination_email', via: 'post'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

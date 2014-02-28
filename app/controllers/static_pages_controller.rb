@@ -29,7 +29,7 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def send_mail
+  def send_contact_email
     name = params[:name]
     email = params[:email]
     body = params[:comments]
@@ -37,5 +37,15 @@ class StaticPagesController < ApplicationController
 
     flash[:sent] = 'Message sent!'
     redirect_to contact_path
+  end
+
+  def send_nomination_email
+    nominee = params[:nominee]
+    nominator = params[:nominator]
+    email = params[:email]
+    NominationMailer.nomination_email(nominee, nominator, email).deliver
+
+    flash[:sent] = 'Message sent!'
+    redirect_to nomination_path
   end
 end

@@ -5,7 +5,7 @@
 
 <div class="container-content">
   <div class="container">
-    <%= form_tag(send_mail_path) do %>
+    <%= form_tag(send_contact_email_path) do %>
       <div class="form-group">
         <%= label_tag 'name', 'Name' %>
         <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Your Name' %>

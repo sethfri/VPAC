@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<p>Dear <%= @nominee %>,</p>
+<br />
+<p>
+  Congratulations!
+  <%= if @nominator
+        @nominator
+      else
+        'Someone'
+      end %>
+   thought you would be a great fit for the Vanderbilt Performing Arts Council (VPAC) Board! If you haven't already
+  started an application, please consider doing so today! The form is located on <%= link_to 'Anchor Link', 'http://google.com' %>.
+</p>
+<br />
+<p>
+  Best,<br />
+  <br />
+  Emily Welter<br />
+  VPAC President
+</p>
+</body>
+</html>
