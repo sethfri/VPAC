@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419013748) do
+ActiveRecord::Schema.define(version: 20140419021236) do
 
   create_table "acfee_topics", force: true do |t|
     t.string   "name"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20140419013748) do
     t.string   "host_org"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "member_group_id"
+  end
+
+  add_index "attended_shows", ["member_group_id"], name: "index_attended_shows_on_member_group_id"
+
+  create_table "attended_shows_member_groups", id: false, force: true do |t|
+    t.integer "attended_show_id"
+    t.integer "member_group_id"
   end
 
   create_table "attended_shows_members", id: false, force: true do |t|
