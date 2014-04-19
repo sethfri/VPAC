@@ -1,4 +1,6 @@
 Vpac::Application.routes.draw do
+  resources :community_scores
+
   resources :attended_shows do
     collection { post :import }
   end

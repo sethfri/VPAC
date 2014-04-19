@@ -1,0 +1,31 @@
+<h1>Listing community_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>School year</th>
+      <th>Member group</th>
+      <th>Number score</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @community_scores.each do |community_score| %>
+      <tr>
+        <td><%= community_score.school_year %></td>
+        <td><%= community_score.member_group %></td>
+        <td><%= community_score.number_score %></td>
+        <td><%= link_to 'Show', community_score %></td>
+        <td><%= link_to 'Edit', edit_community_score_path(community_score) %></td>
+        <td><%= link_to 'Destroy', community_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Community score', new_community_score_path %>

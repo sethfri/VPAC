@@ -1,6 +1,7 @@
 class MemberGroup < ActiveRecord::Base
   has_and_belongs_to_many :members
   has_many :attended_shows
+  has_many :community_scores
 
   def self.make_csv(file, options = {})
     f = File.open(file.path, 'r')

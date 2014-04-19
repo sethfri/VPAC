@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School year:</strong>
+  <%= @community_score.school_year %>
+</p>
+
+<p>
+  <strong>Member group:</strong>
+  <%= @community_score.member_group %>
+</p>
+
+<p>
+  <strong>Number score:</strong>
+  <%= @community_score.number_score %>
+</p>
+
+<%= link_to 'Edit', edit_community_score_path(@community_score) %> |
+<%= link_to 'Back', community_scores_path %>
