@@ -6,6 +6,7 @@
       <th>Title</th>
       <th>School year</th>
       <th>Host org</th>
+      <th>Attending Org</th>
       <th></th>
       <th></th>
       <th></th>
@@ -18,6 +19,7 @@
         <td><%= attended_show.title %></td>
         <td><%= attended_show.school_year %></td>
         <td><%= attended_show.host_org %></td>
+        <td><%= attended_show.member_group.name %></td>
         <td><%= link_to 'Show', attended_show %></td>
         <td><%= link_to 'Edit', edit_attended_show_path(attended_show) %></td>
         <td><%= link_to 'Destroy', attended_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
