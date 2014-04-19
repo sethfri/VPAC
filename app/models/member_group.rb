@@ -54,25 +54,37 @@ class MemberGroup < ActiveRecord::Base
     end
   end
 
+  def community_scores
+    self.community_scores.replace
+  end
+
   def calculate_community_score
     score = CommunityScore.find_by member_group: self, school_year: '2013-2014'
     group_count = self.members.count * 1.0 # To make sure it's not integer division
     total_percentage_attended = 0
-    shows_attended = 33 # Need to remove hard-coding eventually
+    shows_attended = 0
+    number_score = 0
+    shows_counted = [ ]
 
-    AttendedShow.where(member_group: self).each do |show|
-      if (!show.host_org.eql?(self.name))
-        total_percentage_attended += show.members.count / group_count
+    AttendedShow.all.each do |show|
+      if !shows_counted.include?(show.title)
+        if !show.host_org.eql?(self.name)
+          shows_attended += 1
+          total_percentage_attended += show.members.count / group_count
+        end
+
+        shows_counted.push(show.title)
       end
     end
 
-    avg_percentage_attended = total_percentage_attended / shows_attended
-    number_score = 0.66 * avg_percentage_attended + shows_attended
+    avg_percentage_attended = total_percentage_attended / shows_counted.count unless shows_counted.count == 0
+    number_score = (2.0 / 3) * avg_percentage_attended + (1.0 / 3) * shows_attended unless avg_percentage_attended == 0 || shows_attended == 0
 
     if (score.nil?)
       self.community_scores.push(CommunityScore.create(member_group: self, school_year: '2013-2014', number_score: number_score))
     else
       score.number_score = number_score
+      score.save
     end
   end
 end
