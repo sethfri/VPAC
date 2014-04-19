@@ -15,5 +15,18 @@
   <%= @attended_show.host_org %>
 </p>
 
+<p>
+  <strong>Attended Org:</strong>
+  <%= @attended_show.member_group.name %>
+</p>
+
+<p>
+  <strong>Students Attended:</strong>
+  <%= @attended_show.members.count %><br />
+  <% @attended_show.members.each do |member| %>
+    <%= member.name %><br />
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_attended_show_path(@attended_show) %> |
 <%= link_to 'Back', attended_shows_path %>
