@@ -1,4 +1,6 @@
 Vpac::Application.routes.draw do
+  resources :members
+
   resources :publicity_topics
 
   resources :member_groups
