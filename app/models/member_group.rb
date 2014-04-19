@@ -58,11 +58,10 @@ class MemberGroup < ActiveRecord::Base
     score = CommunityScore.find_by member_group: self, school_year: '2013-2014'
     group_count = self.members.count * 1.0 # To make sure it's not integer division
     total_percentage_attended = 0
-    shows_attended = 0
+    shows_attended = 33 # Need to remove hard-coding eventually
 
     AttendedShow.where(member_group: self).each do |show|
       if (!show.host_org.eql?(self.name))
-        shows_attended += 1
         total_percentage_attended += show.members.count / group_count
       end
     end
