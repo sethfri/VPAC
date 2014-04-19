@@ -1,7 +1,10 @@
 Vpac::Application.routes.draw do
+  get "community/index"
   resources :attended_shows
 
-  resources :members
+  resources :members do
+    collection { post :import }
+  end
 
   resources :publicity_topics
 
@@ -35,6 +38,8 @@ Vpac::Application.routes.draw do
 
   match '/send_contact_email', to: 'static_pages#send_contact_email', via: 'post'
   match '/send_nomination_email', to: 'static_pages#send_nomination_email', via: 'post'
+
+  match '/community', to: 'community#index', via: 'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

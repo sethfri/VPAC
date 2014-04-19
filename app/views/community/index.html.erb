@@ -1,0 +1,16 @@
+<%= form_tag import_members_path, multipart: true do %>
+    <div class="field">
+      <%= label_tag :title %>
+      <%= text_field_tag :title %>
+    </div>
+
+    <div class="field">
+      <%= label_tag :host_org, 'Hosting Member Group' %>
+      <%= text_field_tag :host_org %>
+    </div>
+
+    <%= file_field_tag :file %>
+    <%= submit_tag 'Import' %>
+<% end %>
+
+<%= render 'layouts/footer' %>
