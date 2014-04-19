@@ -20,5 +20,14 @@
   <%= @member_group.website_url %>
 </p>
 
+<p>
+  <strong>Attended Shows:</strong><br />
+  <% @member_group.attended_shows.each do |show| %>
+    <% if (!show.host_org.eql?(@member_group.name)) %>
+      <%= show.title  %><br />
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_member_group_path(@member_group) %> |
 <%= link_to 'Back', member_groups_path %>
