@@ -36,9 +36,8 @@ class MemberGroup < ActiveRecord::Base
     f
   end
 
-  def self.import(group_name, file)
-    group = MemberGroup.find_by name: group_name
-    group ||= MemberGroup.create(name: group_name)
+  def self.import(group_id, file)
+    group = MemberGroup.find group_id
 
     CSV.foreach(file.path, headers: true) do |row|
       name = row['Name']

@@ -15,7 +15,7 @@
 <%= form_tag import_member_groups_path, multipart: true do %>
     <div class="field">
       <%= label_tag :group_name, 'Member Group' %>
-      <%= text_field_tag :group_name %>
+      <%= select_tag :group_name, options_from_collection_for_select(MemberGroup.all, 'id', 'name'), prompt: 'Select Group' %>
     </div>
 
     <%= file_field_tag :file %>
