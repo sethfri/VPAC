@@ -6,10 +6,9 @@ class AttendedShow < ActiveRecord::Base
     show = AttendedShow.create(title: title, host_org: host_org, school_year: '2013-2014')
 
     CSV.foreach(file.path, headers: true) do |row|
-      name = row['First Name'] + row['Last Name']
       email = row['Campus Email']
 
-      member = Member.find_by name: name, email: email
+      member = Member.find_by email: email.downcase
       show.members.push(member) unless member.nil?
     end
   end

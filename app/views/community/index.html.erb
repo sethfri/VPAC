@@ -24,13 +24,13 @@
 
 <%= form_tag import_attended_shows_path, multipart: true do %>
     <div class="field">
-      <%= label_tag :title %>
+      <%= label_tag :title, 'Show Title' %>
       <%= text_field_tag :title %>
     </div>
 
     <div class="field">
       <%= label_tag :host_org, 'Hosting Member Group' %>
-      <%= text_field_tag :host_org %>
+      <%= select_tag :host_org, options_from_collection_for_select(MemberGroup.all, 'id', 'name'), prompt: 'Select Group' %>
     </div>
 
     <%= file_field_tag :file %>
