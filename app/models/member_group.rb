@@ -54,10 +54,6 @@ class MemberGroup < ActiveRecord::Base
     end
   end
 
-  def community_scores
-    self.community_scores.replace
-  end
-
   def calculate_community_score
     score = CommunityScore.find_by member_group: self, school_year: '2013-2014'
     group_count = self.members.count * 1.0 # To make sure it's not integer division
