@@ -61,8 +61,10 @@ class MemberGroup < ActiveRecord::Base
     shows_attended = 0
 
     AttendedShow.where(member_group: self).each do |show|
-      shows_attended += 1
-      total_percentage_attended += show.members.count / group_count
+      if (!show.host_org.eql?(self.name))
+        shows_attended += 1
+        total_percentage_attended += show.members.count / group_count
+      end
     end
 
     avg_percentage_attended = total_percentage_attended / shows_attended
