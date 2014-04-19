@@ -1,0 +1,29 @@
+<%= form_for(@attended_show) do |f| %>
+  <% if @attended_show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attended_show.errors.count, "error") %> prohibited this attended_show from being saved:</h2>
+
+      <ul>
+      <% @attended_show.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :school_year %><br>
+    <%= f.text_field :school_year %>
+  </div>
+  <div class="field">
+    <%= f.label :host_org %><br>
+    <%= f.text_field :host_org %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

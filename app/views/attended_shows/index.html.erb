@@ -1,0 +1,31 @@
+<h1>Listing attended_shows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>School year</th>
+      <th>Host org</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attended_shows.each do |attended_show| %>
+      <tr>
+        <td><%= attended_show.title %></td>
+        <td><%= attended_show.school_year %></td>
+        <td><%= attended_show.host_org %></td>
+        <td><%= link_to 'Show', attended_show %></td>
+        <td><%= link_to 'Edit', edit_attended_show_path(attended_show) %></td>
+        <td><%= link_to 'Destroy', attended_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attended show', new_attended_show_path %>

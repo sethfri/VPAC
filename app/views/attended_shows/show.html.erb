@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @attended_show.title %>
+</p>
+
+<p>
+  <strong>School year:</strong>
+  <%= @attended_show.school_year %>
+</p>
+
+<p>
+  <strong>Host org:</strong>
+  <%= @attended_show.host_org %>
+</p>
+
+<%= link_to 'Edit', edit_attended_show_path(@attended_show) %> |
+<%= link_to 'Back', attended_shows_path %>

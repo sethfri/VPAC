@@ -1,0 +1,2 @@
+module AttendedShowsHelper
+end

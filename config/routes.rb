@@ -1,4 +1,6 @@
 Vpac::Application.routes.draw do
+  resources :attended_shows
+
   resources :members
 
   resources :publicity_topics

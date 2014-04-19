@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140211090701) do
+ActiveRecord::Schema.define(version: 20140419013748) do
 
   create_table "acfee_topics", force: true do |t|
     t.string   "name"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 20140211090701) do
     t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "attended_shows", force: true do |t|
+    t.string   "title"
+    t.string   "school_year"
+    t.string   "host_org"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "attended_shows_members", id: false, force: true do |t|
+    t.integer "attended_show_id"
+    t.integer "member_id"
   end
 
   create_table "board_members", force: true do |t|
@@ -45,6 +58,13 @@ ActiveRecord::Schema.define(version: 20140211090701) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "website_url"
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "publicity_topics", force: true do |t|
