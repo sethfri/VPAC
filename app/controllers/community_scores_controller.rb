@@ -4,7 +4,9 @@ class CommunityScoresController < ApplicationController
   # GET /community_scores
   # GET /community_scores.json
   def index
-    @community_scores = CommunityScore.all
+    @community_scores = CommunityScore.all.sort_by do |score|
+      -score.number_score
+    end
   end
 
   # GET /community_scores/1

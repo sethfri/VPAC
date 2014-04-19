@@ -16,8 +16,8 @@
     <% @community_scores.each do |community_score| %>
       <tr>
         <td><%= community_score.school_year %></td>
-        <td><%= community_score.member_group %></td>
-        <td><%= community_score.number_score %></td>
+        <td><%= community_score.member_group.name %></td>
+        <td><%= number_with_precision(community_score.number_score, precision: 2) %></td>
         <td><%= link_to 'Show', community_score %></td>
         <td><%= link_to 'Edit', edit_community_score_path(community_score) %></td>
         <td><%= link_to 'Destroy', community_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>

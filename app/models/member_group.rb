@@ -3,6 +3,9 @@ class MemberGroup < ActiveRecord::Base
   has_many :attended_shows
   has_many :community_scores
 
+  before_save :calculate_community_score
+  before_update :calculate_community_score
+
   def self.make_csv(file, options = {})
     f = File.open(file.path, 'r')
 
@@ -48,6 +51,27 @@ class MemberGroup < ActiveRecord::Base
       member ||= Member.create(name: name, email: email)
 
       group.members.push(member) unless group.members.exists?(member)
+    end
+  end
+
+  def calculate_community_score
+    score = CommunityScore.find_by member_group: self, school_year: '2013-2014'
+    group_count = self.members.count * 1.0 # To make sure it's not integer division
+    total_percentage_attended = 0
+    shows_attended = 0
+
+    AttendedShow.where(member_group: self).each do |show|
+      shows_attended += 1
+      total_percentage_attended += show.members.count / group_count
+    end
+
+    avg_percentage_attended = total_percentage_attended / shows_attended
+    number_score = 0.66 * avg_percentage_attended + shows_attended
+
+    if (score.nil?)
+      self.community_scores.push(CommunityScore.create(member_group: self, school_year: '2013-2014', number_score: number_score))
+    else
+      score.number_score = number_score
     end
   end
 end

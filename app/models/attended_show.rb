@@ -12,8 +12,12 @@ class AttendedShow < ActiveRecord::Base
         CSV.foreach(file.path, headers: true) do |row|
           email = row['Campus Email']
 
-          member = Member.find_by email: email.downcase
-          member.attended_shows.push(show) unless member.nil? || !member.member_groups.exists?(group)
+          member = Member.find_by email: email.downcase unless email.nil?
+
+          if (!member.nil? && member.member_groups.exists?(group))
+            member.attended_shows.push(show)
+            group.calculate_community_score
+          end
         end
       end
     end

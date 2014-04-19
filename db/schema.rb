@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419070927) do
+ActiveRecord::Schema.define(version: 20140419124118) do
 
   create_table "acfee_topics", force: true do |t|
     t.string   "name"
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 20140419070927) do
     t.datetime "updated_at"
     t.string   "position"
   end
+
+  create_table "community_scores", force: true do |t|
+    t.string   "school_year"
+    t.integer  "member_group_id"
+    t.decimal  "number_score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "community_scores", ["member_group_id"], name: "index_community_scores_on_member_group_id"
 
   create_table "member_groups", force: true do |t|
     t.string   "name"
