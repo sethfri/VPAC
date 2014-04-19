@@ -1,4 +1,28 @@
-<%= form_tag import_members_path, multipart: true do %>
+<%= form_tag text_path, multipart: true do %>
+    <p>CSV to Text</p>
+
+    <%= file_field_tag :file %>
+    <%= submit_tag 'Import' %><br /><br />
+<% end %>
+
+<%= form_tag csv_path, multipart: true do %>
+    <p>Text to CSV</p>
+
+    <%= file_field_tag :file %>
+    <%= submit_tag 'Import' %><br /><br />
+<% end %>
+
+<%= form_tag import_member_groups_path, multipart: true do %>
+    <div class="field">
+      <%= label_tag :group_name, 'Member Group' %>
+      <%= text_field_tag :group_name %>
+    </div>
+
+    <%= file_field_tag :file %>
+    <%= submit_tag 'Import' %><br /><br />
+<% end %>
+
+<%= form_tag import_attended_shows_path, multipart: true do %>
     <div class="field">
       <%= label_tag :title %>
       <%= text_field_tag :title %>

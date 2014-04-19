@@ -11,6 +11,13 @@
 </p>
 
 <p>
+  <strong>Member Groups:</strong>
+  <% @member.member_groups.each do |group| %>
+    <%= group.name %><br />
+  <% end %>
+</p>
+
+<p>
   <strong>Shows Attended:</strong><br />
   <% @member.attended_shows.each do |show| %>
     <%= show.title %><br />

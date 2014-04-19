@@ -63,6 +63,21 @@ class MemberGroupsController < ApplicationController
     end
   end
 
+  def text
+    f = MemberGroup.make_text(params[:file])
+    send_file f
+    f.close
+  end
+
+  def csv
+    send_data MemberGroup.make_csv(params[:file])
+  end
+
+  def import
+    MemberGroup.import(params[:group_name], params[:file])
+    redirect_to members_path, notice: 'Members imported.'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_member_group

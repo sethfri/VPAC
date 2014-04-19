@@ -1,14 +1,15 @@
 Vpac::Application.routes.draw do
-  get "community/index"
-  resources :attended_shows
-
-  resources :members do
+  resources :attended_shows do
     collection { post :import }
   end
 
+  resources :members
+
   resources :publicity_topics
 
-  resources :member_groups
+  resources :member_groups do
+    collection { post :import }
+  end
 
   resources :board_members
   resources :current_board, controller: :board_members, only: [:index]
@@ -40,6 +41,8 @@ Vpac::Application.routes.draw do
   match '/send_nomination_email', to: 'static_pages#send_nomination_email', via: 'post'
 
   match '/community', to: 'community#index', via: 'get'
+  match '/csv', to: 'member_groups#csv', via: 'post'
+  match '/text', to: 'member_groups#text', via: 'post'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

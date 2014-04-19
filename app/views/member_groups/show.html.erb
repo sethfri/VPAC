@@ -21,10 +21,17 @@
 </p>
 
 <p>
+  <strong>Members:</strong><br />
+  <% @member_group.members.each do |member| %>
+    <%= member.name %><br />
+  <% end %>
+</p>
+
+<p>
   <strong>Attended Shows:</strong><br />
   <% @member_group.attended_shows.each do |show| %>
     <% if (!show.host_org.eql?(@member_group.name)) %>
-      <%= show.title  %><br />
+      <%= show.title %><br />
     <% end %>
   <% end %>
 </p>
