@@ -46,7 +46,7 @@ class MemberGroup < ActiveRecord::Base
       member = Member.find_by email: email.downcase
       member ||= Member.create(name: name, email: email)
 
-      group.members.push(member)
+      group.members.push(member) unless group.members.exists?(member)
     end
   end
 end
