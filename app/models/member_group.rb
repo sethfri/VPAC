@@ -67,9 +67,9 @@ class MemberGroup < ActiveRecord::Base
         if !show.host_org.eql?(self.name)
           shows_attended += 1
           total_percentage_attended += show.members.count / group_count
-        end
 
-        shows_counted.push(show.title)
+          shows_counted.push(show.title)
+        end
       end
     end
 
