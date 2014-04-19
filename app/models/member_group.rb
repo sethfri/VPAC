@@ -43,7 +43,7 @@ class MemberGroup < ActiveRecord::Base
       name = row['Name']
       email = row['Email']
 
-      member = Member.find_by email: email
+      member = Member.find_by email: email.downcase
       member ||= Member.create(name: name, email: email)
 
       group.members.push(member)
