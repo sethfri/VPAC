@@ -43,6 +43,7 @@ gem 'jbuilder'
 
 # Twitter Bootstrap
 gem 'bootstrap-sass', '~> 3.1'
+gem 'autoprefixer-rails'
 
 group :doc do
   gem 'sdoc', require:false
