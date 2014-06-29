@@ -15,6 +15,7 @@ $blueGradient: linear-gradient(to top, rgba(33,102,148,1), rgba(33,102,148,0.95)
 
 $whiteTextGradient: linear-gradient(to top, rgba(255,255,255,1), rgba(207,208,210,1));
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 body {
