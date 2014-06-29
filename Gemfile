@@ -42,7 +42,7 @@ gem 'jbuilder'
 # gem 'debugger'
 
 # Twitter Bootstrap
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1'
 
 group :doc do
   gem 'sdoc', require:false
