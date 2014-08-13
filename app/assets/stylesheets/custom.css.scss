@@ -132,7 +132,7 @@ body {
   padding: 0;
 }
 
-#first-item, #second-item, #third-item, #fourth-item, #fifth-item {
+#first-item, #second-item, #third-item, #fourth-item, #fifth-item, #sixth-item {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -158,6 +158,10 @@ body {
 
 #fifth-item {
   background-image: url(image_path('carousel5.png'));
+}
+
+#sixth-item {
+  background-image: url(image_path('carousel6.png'));
 }
 
 // Jumbotron
