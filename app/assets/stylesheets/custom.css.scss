@@ -120,27 +120,27 @@ body {
   width: 100%;
 }
 
-.carousel, .item {
+/*.carousel, .item {
   height: 660px;
 
   @media (max-width: $screen-sm-min) {
     height: 340px;
   }
-}
+}*/
 
 #col-carousel {
   padding: 0;
 }
 
-#first-item, #second-item, #third-item, #fourth-item, #fifth-item, #sixth-item {
+/*#first-item, #second-item, #third-item, #fourth-item, #fifth-item, #sixth-item {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   //height: 202.32px;
-}
+}*/
 
-#first-item {
+/*#first-item {
   background-image: url(image_path('carousel1.png'));
 }
 
@@ -162,7 +162,7 @@ body {
 
 #sixth-item {
   background-image: url(image_path('carousel6.png'));
-}
+}*/
 
 // Jumbotron
 
