@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @carousel_items = ContentfulClient.instance.carousel_items
   end
 
   def mission

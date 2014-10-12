@@ -56,3 +56,6 @@ gem 'newrelic_rpm'
 # Faster Heroku deploys
 gem 'dalli'
 gem 'memcachier'
+
+# Contentful
+gem 'contentful'

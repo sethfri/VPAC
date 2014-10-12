@@ -12,48 +12,11 @@
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
-          <div class="item active" id="first-item">
-            <%= image_tag 'carousel1.png', class: 'img-responsive' %>
-          </div>
-          <div class="item" id="second-item">
-            <%= image_tag 'carousel2.png', class: 'img-responsive' %>
-            <!--<div class="carousel-caption">
-              <h2>Vandy Tap That!</h2>
-
-              <p class="lead">Congratulations to new VPAC group Tap That! on a fabulous debut showcase last December. Be
-                sure to check out their April showcase!</p>
-            </div>-->
-          </div>
-          <div class="item" id="third-item">
-            <%= image_tag 'carousel3.png', class: 'img-responsive' %>
-            <!--<div class="carousel-caption">
-              <h2>Harmonic Notion and Melodores</h2>
-
-              <p class="lead">Two VPAC a cappella groups represented Vandy at the International Championship of
-                Collegiate A Cappella Quarterfinals in Knoxville. The ICCA Semifinals are taking place in Nashville in
-                mid-March.</p>
-            </div>-->
-          </div>
-          <div class="item" id="fourth-item">
-            <%= image_tag 'carousel4.png', class: 'img-responsive' %>
-            <!--<div class="carousel-caption">
-              <h2>Tongue 'n' Cheek</h2>
-
-              <p class="lead">Best of luck to TNC as they head to Nationals for the College Improv Tournament!</p>
-            </div>-->
-          </div>
-          <div class="item" id="fifth-item">
-            <%= image_tag 'carousel5.png', class: 'img-responsive' %>
-            <!--<div class="carousel-caption">
-              <h2>BhangraDores</h2>
-
-              <p class="lead">Thanks to the BhangraDores, more and more Vanderbilt students have learned how to Bhangra.
-                Best of luck to them as they head into competition season.</p>
-            </div>-->
-          </div>
-          <div class="item" id="sixth-item">
-            <%= image_tag 'carousel6.png', class: 'img-responsive' %>
-          </div>
+          <% @carousel_items.each do |carousel_item| %>
+            <div class="item<% if carousel_item.order == 1 %> active<% end %>">
+              <%= image_tag carousel_item.image.image_url, class: 'img-responsive' %>
+            </div>
+          <% end %>
         </div>
         <!-- Carousel nav -->
         <a class="left carousel-control" href="#news-carousel" role="button" data-slide="prev">
