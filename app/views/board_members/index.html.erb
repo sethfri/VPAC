@@ -8,7 +8,7 @@
     <% @board_members.each do |board_member| %>
       <div class="row board-member-row">
         <div class="col-xs-12 col-sm-5">
-          <%= image_tag "#{ board_member.name }.jpg", alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo img-responsive' %>
+          <%= image_tag board_member.image.image_url, alt: "Photo of #{ board_member.name }", class: 'img-rounded board-photo img-responsive' %>
         </div>
 
         <div class="col-xs-12 col-sm-7">
@@ -17,12 +17,12 @@
             <p class="lead"><%= board_member.name %></p>
 
             <h3 class="column-header">Board Position</h3>
-            <p class="lead"><%= board_member.position %></p>
+            <p class="lead"><%= board_member.board_position %></p>
 
             <h3 class="column-header">Bio</h3>
             <p class="lead"><%= board_member.bio %></p>
 
-            <p class="lead"><%= mail_to board_member.email, "Email #{ board_member.name.split(' ')[0] }" %></p>
+            <p class="lead"><%= mail_to board_member.email_address, "Email #{ board_member.name.split(' ')[0] }" %></p>
           </div>
         </div>
       </div>
