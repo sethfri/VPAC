@@ -16,12 +16,15 @@ class StaticPagesController < ApplicationController
   end
 
   def spotlight
+    @event = ContentfulClient.instance.spotlight
   end
 
   def main_attraction
+    @event = ContentfulClient.instance.main_attraction
   end
 
   def encore
+    @event = ContentfulClient.instance.encore
   end
 
   def media

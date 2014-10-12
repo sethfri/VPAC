@@ -22,4 +22,16 @@ class ContentfulClient
   def board_members
     @client.entries(content_type: '1q34zvtXzCGo8ck6qYg8qa', order: 'fields.order')
   end
+
+  def spotlight
+    @client.entry('2FvarL4hpY4GI00Ic0Koeu')
+  end
+
+  def main_attraction
+    @client.entry('37AS9XjjF6GW2KwOeeYkEC')
+  end
+
+  def encore
+    @client.entry('3VCNZSEY36C62qMamowmuq')
+  end
 end
