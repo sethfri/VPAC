@@ -12,6 +12,6 @@ class ContentfulClient
   end
 
   def carousel_items
-    @client.entries(content_type: '5AYS9ZskFiUiYCc8owESc', order: 'sys.createdAt')
+    @client.entries(content_type: '5AYS9ZskFiUiYCc8owESc', order: 'fields.order')
   end
 end
