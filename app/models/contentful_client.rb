@@ -15,6 +15,10 @@ class ContentfulClient
     @client.entries(content_type: '5AYS9ZskFiUiYCc8owESc', order: 'fields.order')
   end
 
+  def member_groups
+    @client.entries(content_type: '39eXosCElOOu4e8MKOy6IO')
+  end
+
   def board_members
     @client.entries(content_type: '1q34zvtXzCGo8ck6qYg8qa', order: 'fields.order')
   end

@@ -8,13 +8,13 @@
     <% @member_groups.each do |member_group| %>
       <div class="row member-group-row">
         <div class="col-xs-12 col-sm-5">
-          <%= image_tag "#{ member_group.name }.png", alt: "Photo of #{ member_group.name }", class: 'img-rounded member-group-photo img-responsive' %>
+          <%= image_tag member_group.image.image_url, alt: "Photo of #{ member_group.name }", class: 'img-rounded member-group-photo img-responsive' %>
         </div>
 
         <div class="col-xs-12 col-sm-7">
           <div class="caption">
             <h3 class="top-column-header">Name</h3>
-            <p class="lead"><%= link_to member_group.name, member_group.website_url, target: '_blank' %></p>
+            <p class="lead"><%= link_to member_group.name, member_group.website, target: '_blank' %></p>
 
             <h3 class="column-header">Description</h3>
             <p class="lead"><%= member_group.description %></p>
