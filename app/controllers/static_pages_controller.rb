@@ -44,8 +44,6 @@ class StaticPagesController < ApplicationController
   end
 
   def send_nomination_email
-    @body = ContentfulClient.instance.nomination_email_body
-
     nominee = params[:nominee]
     nominator = params[:nominator]
     email = params[:email]

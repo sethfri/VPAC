@@ -35,7 +35,7 @@ class ContentfulClient
     @client.entry('3VCNZSEY36C62qMamowmuq')
   end
 
-  def nomination_email_body
+  def nomination_email
     @client.entry('4gwOy64mQ0CiYMEUgiG8Ge')
   end
 end

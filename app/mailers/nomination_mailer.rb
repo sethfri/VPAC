@@ -5,6 +5,7 @@ class NominationMailer < ActionMailer::Base
     @nominee = nominee
     @nominator = nominator
     @email = email
+    @body = ContentfulClient.instance.nomination_email.body.html_safe
 
     mail(to: email, subject: 'VPAC Board Nomination')
   end
