@@ -34,4 +34,8 @@ class ContentfulClient
   def encore
     @client.entry('3VCNZSEY36C62qMamowmuq')
   end
+
+  def nomination_email_body
+    @client.entry('4gwOy64mQ0CiYMEUgiG8Ge')
+  end
 end
